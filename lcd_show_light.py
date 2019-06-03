@@ -7,13 +7,19 @@ import RPi.GPIO as GPIO
 import time
 
 # instantiate lcd and specify pins
-lcd = Adafruit_CharLCD(rs=26, en=19,
-                               d4=13, d5=6, d6=5, d7=11,
-                                                      cols=16, lines=2)
+lcd = Adafruit_CharLCD(rs=26,
+                       en=19,
+                       d4=13,
+                       d5=6,
+                       d6=5,
+                       d7=11,
+                       cols=16,
+                       lines=2)
+
 lcd.clear()
 
 # display text on LCD display \n = new line
-lcd.message('Welcome Sweetie Pi\n' + str(time.strftime("%d-%m-%y @ %H:%M")))
+lcd.message(' Hey Sweetie Pi \n' + str(time.strftime("%d-%m-%y @ %H:%M")))
 sleep(3)
 
 # scroll text off display
